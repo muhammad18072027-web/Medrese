@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кирүү — KitepMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Менюну ачуу же жабуу">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="KitepMarket — башкы бет"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+      <nav class="main-nav" aria-label="Негизги меню">
+        <ul>
+          <li><a href="../index.html">Башкы бет</a></li>
+          <li><a href="books.html">Китептер</a></li>
+          <li><a href="sell.html">Китеп сатуу</a></li>
+          <li><a href="../index.html#categories">Категориялар</a></li>
+          <li><a href="profile.html">Менин аккаунтум</a></li>
+          <li class="only-mobile"><a href="login.html">Кирүү</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="books.html" class="icon-btn" aria-label="Издөө"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="icon-btn" aria-label="Себет"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">2</span></a>
+        <a href="profile.html" class="icon-btn hide-xs" aria-label="Профиль"><i class="fa-regular fa-user"></i></a>
+        <a href="login.html" class="btn btn-primary btn-sm hide-xs">Кирүү</a>
+        <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-aside" aria-label="KitepMarket жөнүндө">
+      <span class="eyebrow eyebrow-light"><i class="fa-solid fa-book-open"></i> KitepMarket</span>
+      <h2>Китеп окуган коом — билимдүү коом</h2>
+      <p>Аккаунт ачып, китептерди сатып алыңыз жана өз китептериңизди сатыкка коюңуз.</p>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> Жарыя берүү акысыз</li>
+        <li><i class="fa-solid fa-circle-check"></i> Сатуучу менен түз байланыш</li>
+        <li><i class="fa-solid fa-circle-check"></i> Өз шаарыңыздан китеп табыңыз</li>
+      </ul>
+    </section>
+
+    <section class="auth-main" aria-label="Кирүү жана катталуу">
+      <div class="auth-card">
+        <input type="radio" name="auth-tab" id="tab-login" class="visually-hidden" checked>
+        <input type="radio" name="auth-tab" id="tab-register" class="visually-hidden">
+
+        <div class="tab-labels">
+          <label for="tab-login">Кирүү</label>
+          <label for="tab-register">Катталуу</label>
+        </div>
+
+        <!-- КИРҮҮ -->
+        <form class="auth-form form-login" action="login.html" method="post">
+          <h1>Кайра кош келиңиз</h1>
+          <p class="sub">Аккаунтуңузга кирүү үчүн маалыматтарды жазыңыз.</p>
+          <div class="field">
+            <label for="login-email">Email</label>
+            <div class="input-icon"><i class="fa-regular fa-envelope"></i><input type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+          </div>
+          <div class="field">
+            <label for="login-password">Пароль</label>
+            <div class="input-icon"><i class="fa-solid fa-lock"></i><input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" required></div>
+          </div>
+          <div class="auth-row">
+            <label class="check"><input type="checkbox" name="remember"> Мени эстеп кал</label>
+            <a href="#">Паролду унуттуңузбу?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Кирүү</button>
+          <div class="auth-divider">же</div>
+          <div class="auth-socials">
+            <a href="#" class="btn btn-outline"><i class="fa-brands fa-google"></i> Google</a>
+            <a href="#" class="btn btn-outline"><i class="fa-brands fa-telegram"></i> Telegram</a>
+          </div>
+          <p class="switch-text">Аккаунтуңуз жокпу? <label for="tab-register">Катталуу</label></p>
+        </form>
+
+        <!-- КАТТАЛУУ -->
+        <form class="auth-form form-register" action="login.html" method="post">
+          <h1>Аккаунт ачуу</h1>
+          <p class="sub">Бир нече секундда катталыңыз.</p>
+          <div class="field">
+            <label for="reg-name">Аты-жөнү</label>
+            <div class="input-icon"><i class="fa-regular fa-user"></i><input type="text" id="reg-name" name="name" placeholder="Аты-жөнүңүз" autocomplete="name" required></div>
+          </div>
+          <div class="field">
+            <label for="reg-email">Email</label>
+            <div class="input-icon"><i class="fa-regular fa-envelope"></i><input type="email" id="reg-email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+          </div>
+          <div class="field">
+            <label for="reg-phone">Телефон</label>
+            <div class="input-icon"><i class="fa-solid fa-phone"></i><input type="tel" id="reg-phone" name="phone" placeholder="+996 700 123 456" autocomplete="tel" required></div>
+          </div>
+          <div class="field">
+            <label for="reg-password">Пароль</label>
+            <div class="input-icon"><i class="fa-solid fa-lock"></i><input type="password" id="reg-password" name="password" placeholder="Кеминде 6 символ" minlength="6" autocomplete="new-password" required></div>
+          </div>
+          <label class="check"><input type="checkbox" name="terms" required> Эрежелер менен макулмун</label>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Катталуу</button>
+          <p class="switch-text">Аккаунтуңуз барбы? <label for="tab-login">Кирүү</label></p>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

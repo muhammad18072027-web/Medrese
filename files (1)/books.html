@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Китептер — KitepMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Менюну ачуу же жабуу">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="KitepMarket — башкы бет"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+      <nav class="main-nav" aria-label="Негизги меню">
+        <ul>
+          <li><a href="../index.html">Башкы бет</a></li>
+          <li><a href="books.html" class="active">Китептер</a></li>
+          <li><a href="sell.html">Китеп сатуу</a></li>
+          <li><a href="../index.html#categories">Категориялар</a></li>
+          <li><a href="profile.html">Менин аккаунтум</a></li>
+          <li class="only-mobile"><a href="login.html">Кирүү</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#search" class="icon-btn" aria-label="Издөө"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="icon-btn" aria-label="Себет"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">2</span></a>
+        <a href="profile.html" class="icon-btn hide-xs" aria-label="Профиль"><i class="fa-regular fa-user"></i></a>
+        <a href="login.html" class="btn btn-primary btn-sm hide-xs">Кирүү</a>
+        <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <ol class="breadcrumbs" aria-label="Навигация"><li><a href="../index.html">Башкы бет</a></li><li>Китептер</li></ol>
+        <h1>Бардык китептер</h1>
+        <p>Каталогдон өзүңүзгө ылайыктуу китепти табыңыз</p>
+      </div>
+    </section>
+
+    <div class="container page-section">
+      <div class="catalog">
+
+        <!-- ФИЛЬТР (UI гана) -->
+        <details class="filters" open>
+          <summary><span><i class="fa-solid fa-sliders"></i> Фильтр</span></summary>
+          <form class="filters-body" action="books.html" method="get">
+            <h2><i class="fa-solid fa-sliders"></i> Фильтр</h2>
+
+            <fieldset class="filter-box">
+              <legend class="filter-title">Категория</legend>
+              <label class="check"><input type="checkbox" name="cat"> Кыргыз адабияты</label>
+              <label class="check"><input type="checkbox" name="cat"> Чет элдик адабият</label>
+              <label class="check"><input type="checkbox" name="cat"> Бизнес</label>
+              <label class="check"><input type="checkbox" name="cat"> Психология</label>
+              <label class="check"><input type="checkbox" name="cat"> IT жана технология</label>
+              <label class="check"><input type="checkbox" name="cat"> Тарых</label>
+              <label class="check"><input type="checkbox" name="cat"> Балдар адабияты</label>
+              <label class="check"><input type="checkbox" name="cat"> Окуу китептери</label>
+              <label class="check"><input type="checkbox" name="cat"> Роман</label>
+              <label class="check"><input type="checkbox" name="cat"> Детектив</label>
+            </fieldset>
+
+            <fieldset class="filter-box">
+              <legend class="filter-title">Баасы (сом)</legend>
+              <div class="price-inputs">
+                <input type="number" name="min" placeholder="0" min="0" aria-label="Минималдуу баа">
+                <span>—</span>
+                <input type="number" name="max" placeholder="5000" min="0" aria-label="Максималдуу баа">
+              </div>
+              <input type="range" min="0" max="5000" step="100" value="2000" aria-label="Баа диапазону">
+              <label class="check"><input type="radio" name="price" checked> Бардыгы</label>
+              <label class="check"><input type="radio" name="price"> 0–500 сом</label>
+              <label class="check"><input type="radio" name="price"> 500–1000 сом</label>
+              <label class="check"><input type="radio" name="price"> 1000–2000 сом</label>
+              <label class="check"><input type="radio" name="price"> 2000+ сом</label>
+            </fieldset>
+
+            <fieldset class="filter-box">
+              <legend class="filter-title">Китептин абалы</legend>
+              <label class="check"><input type="checkbox" name="cond"> Жаңы</label>
+              <label class="check"><input type="checkbox" name="cond"> Абдан жакшы</label>
+              <label class="check"><input type="checkbox" name="cond"> Жакшы</label>
+              <label class="check"><input type="checkbox" name="cond"> Колдонулган</label>
+            </fieldset>
+
+            <div class="filter-box">
+              <label class="filter-title" for="f-city">Шаар</label>
+              <select id="f-city" name="city">
+                <option>Бардык шаарлар</option>
+                <option>Бишкек</option><option>Ош</option><option>Жалал-Абад</option>
+                <option>Каракол</option><option>Нарын</option><option>Талас</option>
+              </select>
+            </div>
+
+            <div class="filter-actions">
+              <button type="submit" class="btn btn-primary">Колдонуу</button>
+              <button type="reset" class="btn btn-outline">Тазалоо</button>
+            </div>
+          </form>
+        </details>
+
+        <!-- КАТАЛОГ -->
+        <section aria-label="Китептер тизмеси">
+          <form class="search-panel" id="search" action="books.html" method="get" role="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="q" placeholder="Китептин атын, авторун же категориясын изде..." aria-label="Издөө">
+            <button type="submit" class="btn btn-gold">Издөө</button>
+          </form>
+
+          <div class="toolbar">
+            <p>Табылды: <strong>12 китеп</strong></p>
+            <div>
+              <label for="sort">Сорттоо:</label>
+              <select id="sort" name="sort">
+                <option>Жаңы кошулгандар</option>
+                <option>Арзандан кымбатка</option>
+                <option>Кымбаттан арзанга</option>
+                <option>Аталышы боюнча A–Z</option>
+                <option>Популярдуулугу боюнча</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="book-grid">
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="Atomic Habits китебинин мукабасы" loading="lazy"><span class="badge badge-used">Колдонулган</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Atomic Habits</h3>
+            <p class="book-author">James Clear</p>
+            <div class="book-row"><span class="book-price">850 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=12" alt="" width="36" height="36"><div><strong>Нурбек</strong><small>12 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg" alt="Rich Dad Poor Dad китебинин мукабасы" loading="lazy"><span class="badge badge-good">Жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Rich Dad Poor Dad</h3>
+            <p class="book-author">Robert Kiyosaki</p>
+            <div class="book-row"><span class="book-price">700 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Ош</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=5" alt="" width="36" height="36"><div><strong>Айгүл</strong><small>8 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" alt="The Psychology of Money китебинин мукабасы" loading="lazy"><span class="badge badge-new">Жаңы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">The Psychology of Money</h3>
+            <p class="book-author">Morgan Housel</p>
+            <div class="book-row"><span class="book-price">950 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=15" alt="" width="36" height="36"><div><strong>Эрлан</strong><small>21 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780747532699-L.jpg" alt="Harry Potter and the Philosopher's Stone китебинин мукабасы" loading="lazy"><span class="badge badge-vgood">Абдан жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Harry Potter and the Philosopher's Stone</h3>
+            <p class="book-author">J.K. Rowling</p>
+            <div class="book-row"><span class="book-price">1 200 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Каракол</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=32" alt="" width="36" height="36"><div><strong>Айжан</strong><small>15 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg" alt="Алхимик китебинин мукабасы" loading="lazy"><span class="badge badge-used">Колдонулган</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Алхимик</h3>
+            <p class="book-author">Paulo Coelho</p>
+            <div class="book-row"><span class="book-price">550 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Жалал-Абад</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=11" alt="" width="36" height="36"><div><strong>Бекзат</strong><small>6 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg" alt="Deep Work китебинин мукабасы" loading="lazy"><span class="badge badge-new">Жаңы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Deep Work</h3>
+            <p class="book-author">Cal Newport</p>
+            <div class="book-row"><span class="book-price">900 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=12" alt="" width="36" height="36"><div><strong>Нурбек</strong><small>12 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg" alt="Clean Code китебинин мукабасы" loading="lazy"><span class="badge badge-good">Жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Clean Code</h3>
+            <p class="book-author">Robert C. Martin</p>
+            <div class="book-row"><span class="book-price">1 800 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=13" alt="" width="36" height="36"><div><strong>Тимур</strong><small>9 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg" alt="Sapiens китебинин мукабасы" loading="lazy"><span class="badge badge-vgood">Абдан жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Sapiens</h3>
+            <p class="book-author">Yuval Noah Harari</p>
+            <div class="book-row"><span class="book-price">1 100 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Ош</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=5" alt="" width="36" height="36"><div><strong>Айгүл</strong><small>8 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9781585424337-L.jpg" alt="Think and Grow Rich китебинин мукабасы" loading="lazy"><span class="badge badge-used">Колдонулган</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Think and Grow Rich</h3>
+            <p class="book-author">Napoleon Hill</p>
+            <div class="book-row"><span class="book-price">650 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Талас</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=47" alt="" width="36" height="36"><div><strong>Санжар</strong><small>3 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg" alt="The Da Vinci Code китебинин мукабасы" loading="lazy"><span class="badge badge-good">Жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">The Da Vinci Code</h3>
+            <p class="book-author">Dan Brown</p>
+            <div class="book-row"><span class="book-price">600 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Нарын</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=33" alt="" width="36" height="36"><div><strong>Гүлзат</strong><small>5 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780143058144-L.jpg" alt="Crime and Punishment китебинин мукабасы" loading="lazy"><span class="badge badge-used">Колдонулган</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Crime and Punishment</h3>
+            <p class="book-author">Fyodor Dostoevsky</p>
+            <div class="book-row"><span class="book-price">750 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=13" alt="" width="36" height="36"><div><strong>Тимур</strong><small>9 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="#"><img src="https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg" alt="The Little Prince китебинин мукабасы" loading="lazy"><span class="badge badge-vgood">Абдан жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">The Little Prince</h3>
+            <p class="book-author">Antoine de Saint-Exupéry</p>
+            <div class="book-row"><span class="book-price">450 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Ош</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=5" alt="" width="36" height="36"><div><strong>Айгүл</strong><small>8 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="#" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+          </div>
+
+          <nav class="pagination" aria-label="Беттер">
+            <a href="#" aria-label="Мурунку"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="#" class="current" aria-current="page">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" aria-label="Кийинки"><i class="fa-solid fa-chevron-right"></i></a>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo light"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+        <p>Китептерди сатып алуу жана сатуу үчүн ыңгайлуу платформа.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Биз жөнүндө">
+        <h3>Биз жөнүндө</h3>
+        <a href="#">Биз жөнүндө</a>
+        <a href="#">Байланыш</a>
+        <a href="#">Эрежелер</a>
+      </nav>
+      <nav class="footer-col" aria-label="Колдонуучулар үчүн">
+        <h3>Колдонуучулар үчүн</h3>
+        <a href="books.html">Китептер</a>
+        <a href="sell.html">Китеп сатуу</a>
+        <a href="../index.html#categories">Категориялар</a>
+        <a href="profile.html">Менин аккаунтум</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Байланыш</h3>
+        <p><i class="fa-solid fa-phone"></i> +996 700 123 456</p>
+        <p><i class="fa-solid fa-envelope"></i> info@kitepmarket.kg</p>
+        <p><i class="fa-solid fa-location-dot"></i> Бишкек, Кыргызстан</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 KitepMarket. Бардык укуктар корголгон.</div></div>
+  </footer>
+</body>
+</html>

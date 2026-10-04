@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KitepMarket — Китебиңди сат. Жаңы китепти тап.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Менюну ачуу же жабуу">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="KitepMarket — башкы бет"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+      <nav class="main-nav" aria-label="Негизги меню">
+        <ul>
+          <li><a href="index.html" class="active">Башкы бет</a></li>
+          <li><a href="pages/books.html">Китептер</a></li>
+          <li><a href="pages/sell.html">Китеп сатуу</a></li>
+          <li><a href="index.html#categories">Категориялар</a></li>
+          <li><a href="pages/profile.html">Менин аккаунтум</a></li>
+          <li class="only-mobile"><a href="pages/login.html">Кирүү</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#search" class="icon-btn" aria-label="Издөө"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="icon-btn" aria-label="Себет"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">2</span></a>
+        <a href="pages/profile.html" class="icon-btn hide-xs" aria-label="Профиль"><i class="fa-regular fa-user"></i></a>
+        <a href="pages/login.html" class="btn btn-primary btn-sm hide-xs">Кирүү</a>
+        <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow"><i class="fa-solid fa-feather-pointed"></i> Китеп маркетплейси</span>
+          <h1>Китебиңди сат.<br><em>Жаңы китепти тап.</em></h1>
+          <p>Каалаган китебиңизди оңой сатып алыңыз же өзүңүздүн китебиңизди сатыкка коюңуз.</p>
+          <div class="hero-buttons">
+            <a href="pages/books.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-book"></i> Китептерди көрүү</a>
+            <a href="pages/sell.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-tag"></i> Китеп сатуу</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>2 500+</strong><span>китеп</span></li>
+            <li><strong>800+</strong><span>сатуучу</span></li>
+            <li><strong>8</strong><span>шаар</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img class="hero-cover hc-1" src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="">
+          <img class="hero-cover hc-2" src="https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg" alt="">
+          <img class="hero-cover hc-3" src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" alt="">
+          <span class="hero-dot hd-1"></span><span class="hero-dot hd-2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section" id="search" aria-label="Китеп издөө">
+      <div class="container">
+        <form class="search-panel" action="pages/books.html" method="get" role="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" name="q" placeholder="Китептин атын, авторун же категориясын изде..." aria-label="Издөө">
+          <button type="submit" class="btn btn-gold btn-lg">Издөө</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- КАТЕГОРИЯЛАР -->
+    <section class="section container" id="categories" aria-labelledby="cat-title">
+      <div class="section-head center">
+        <h2 id="cat-title">Китеп категориялары</h2>
+        <p>Кызыккан багытыңызды тандаңыз</p>
+      </div>
+      <div class="category-grid">
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-mountain"></i></span><strong>Кыргыз адабияты</strong><small>320 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-globe"></i></span><strong>Чет элдик адабият</strong><small>410 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-briefcase"></i></span><strong>Бизнес</strong><small>280 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-brain"></i></span><strong>Психология</strong><small>195 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-laptop-code"></i></span><strong>IT жана технология</strong><small>150 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-landmark"></i></span><strong>Тарых</strong><small>170 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-puzzle-piece"></i></span><strong>Балдар адабияты</strong><small>230 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-graduation-cap"></i></span><strong>Окуу китептери</strong><small>260 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-feather-pointed"></i></span><strong>Роман</strong><small>340 китеп</small></a>
+        <a href="pages/books.html" class="category-card"><span class="category-icon"><i class="fa-solid fa-user-secret"></i></span><strong>Детектив</strong><small>175 китеп</small></a>
+      </div>
+    </section>
+
+    <!-- ЖАҢЫ КИТЕПТЕР -->
+    <section class="section container" aria-labelledby="new-title">
+      <div class="section-head row">
+        <div>
+          <h2 id="new-title">Жаңы кошулган китептер</h2>
+          <p>Акыркы жарыяланган сунуштар</p>
+        </div>
+        <a href="pages/books.html" class="link-more">Баарын көрүү <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="book-grid">
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="Atomic Habits китебинин мукабасы" loading="lazy"><span class="badge badge-used">Колдонулган</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Atomic Habits</h3>
+            <p class="book-author">James Clear</p>
+            <div class="book-row"><span class="book-price">850 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=12" alt="" width="36" height="36"><div><strong>Нурбек</strong><small>12 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9781612680194-L.jpg" alt="Rich Dad Poor Dad китебинин мукабасы" loading="lazy"><span class="badge badge-good">Жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Rich Dad Poor Dad</h3>
+            <p class="book-author">Robert Kiyosaki</p>
+            <div class="book-row"><span class="book-price">700 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Ош</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=5" alt="" width="36" height="36"><div><strong>Айгүл</strong><small>8 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" alt="The Psychology of Money китебинин мукабасы" loading="lazy"><span class="badge badge-new">Жаңы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">The Psychology of Money</h3>
+            <p class="book-author">Morgan Housel</p>
+            <div class="book-row"><span class="book-price">950 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=15" alt="" width="36" height="36"><div><strong>Эрлан</strong><small>21 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780747532699-L.jpg" alt="Harry Potter and the Philosopher's Stone китебинин мукабасы" loading="lazy"><span class="badge badge-vgood">Абдан жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Harry Potter and the Philosopher's Stone</h3>
+            <p class="book-author">J.K. Rowling</p>
+            <div class="book-row"><span class="book-price">1 200 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Каракол</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=32" alt="" width="36" height="36"><div><strong>Айжан</strong><small>15 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg" alt="Алхимик китебинин мукабасы" loading="lazy"><span class="badge badge-used">Колдонулган</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Алхимик</h3>
+            <p class="book-author">Paulo Coelho</p>
+            <div class="book-row"><span class="book-price">550 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Жалал-Абад</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=11" alt="" width="36" height="36"><div><strong>Бекзат</strong><small>6 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg" alt="Deep Work китебинин мукабасы" loading="lazy"><span class="badge badge-new">Жаңы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Deep Work</h3>
+            <p class="book-author">Cal Newport</p>
+            <div class="book-row"><span class="book-price">900 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=12" alt="" width="36" height="36"><div><strong>Нурбек</strong><small>12 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg" alt="Clean Code китебинин мукабасы" loading="lazy"><span class="badge badge-good">Жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Clean Code</h3>
+            <p class="book-author">Robert C. Martin</p>
+            <div class="book-row"><span class="book-price">1 800 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Бишкек</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=13" alt="" width="36" height="36"><div><strong>Тимур</strong><small>9 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+        <article class="book-card">
+          <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg" alt="Sapiens китебинин мукабасы" loading="lazy"><span class="badge badge-vgood">Абдан жакшы</span></a>
+          <div class="book-body">
+            <h3 class="book-title">Sapiens</h3>
+            <p class="book-author">Yuval Noah Harari</p>
+            <div class="book-row"><span class="book-price">1 100 сом</span><span class="book-city"><i class="fa-solid fa-location-dot"></i> Ош</span></div>
+            <div class="seller"><img src="https://i.pravatar.cc/80?img=5" alt="" width="36" height="36"><div><strong>Айгүл</strong><small>8 китеп сатылды</small></div></div>
+            <div class="book-actions"><a href="pages/books.html" class="btn btn-outline btn-sm">Кененирээк</a><a href="#" class="btn btn-primary btn-sm">Сатып алуу</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ПОПУЛЯРДУУ КИТЕПТЕР -->
+    <section class="section popular-section" aria-labelledby="pop-title">
+      <div class="container">
+        <div class="section-head row">
+          <div>
+            <h2 id="pop-title">Популярдуу китептер</h2>
+            <p>Окурмандар эң көп тандаган китептер</p>
+          </div>
+          <a href="pages/books.html" class="link-more">Баарын көрүү <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="book-grid popular-grid">
+          <article class="book-card compact">
+            <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" alt="The Psychology of Money китебинин мукабасы" loading="lazy"></a>
+            <div class="book-body">
+              <h3 class="book-title">The Psychology of Money</h3>
+              <p class="book-author">Morgan Housel</p>
+              <p class="rating" aria-label="Рейтинг 4.9"><span class="stars">★★★★★</span> 4.9</p>
+              <div class="book-row"><span class="book-price">950 сом</span></div>
+              <p class="mini-seller"><i class="fa-regular fa-user"></i> Эрлан</p>
+            </div>
+          </article>
+          <article class="book-card compact">
+            <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780747532699-L.jpg" alt="Harry Potter and the Philosopher's Stone китебинин мукабасы" loading="lazy"></a>
+            <div class="book-body">
+              <h3 class="book-title">Harry Potter and the Philosopher's Stone</h3>
+              <p class="book-author">J.K. Rowling</p>
+              <p class="rating" aria-label="Рейтинг 4.9"><span class="stars">★★★★★</span> 4.9</p>
+              <div class="book-row"><span class="book-price">1 200 сом</span></div>
+              <p class="mini-seller"><i class="fa-regular fa-user"></i> Айжан</p>
+            </div>
+          </article>
+          <article class="book-card compact">
+            <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="Atomic Habits китебинин мукабасы" loading="lazy"></a>
+            <div class="book-body">
+              <h3 class="book-title">Atomic Habits</h3>
+              <p class="book-author">James Clear</p>
+              <p class="rating" aria-label="Рейтинг 4.8"><span class="stars">★★★★★</span> 4.8</p>
+              <div class="book-row"><span class="book-price">850 сом</span></div>
+              <p class="mini-seller"><i class="fa-regular fa-user"></i> Нурбек</p>
+            </div>
+          </article>
+          <article class="book-card compact">
+            <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg" alt="Sapiens китебинин мукабасы" loading="lazy"></a>
+            <div class="book-body">
+              <h3 class="book-title">Sapiens</h3>
+              <p class="book-author">Yuval Noah Harari</p>
+              <p class="rating" aria-label="Рейтинг 4.8"><span class="stars">★★★★★</span> 4.8</p>
+              <div class="book-row"><span class="book-price">1 100 сом</span></div>
+              <p class="mini-seller"><i class="fa-regular fa-user"></i> Айгүл</p>
+            </div>
+          </article>
+          <article class="book-card compact">
+            <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg" alt="Clean Code китебинин мукабасы" loading="lazy"></a>
+            <div class="book-body">
+              <h3 class="book-title">Clean Code</h3>
+              <p class="book-author">Robert C. Martin</p>
+              <p class="rating" aria-label="Рейтинг 4.8"><span class="stars">★★★★★</span> 4.8</p>
+              <div class="book-row"><span class="book-price">1 800 сом</span></div>
+              <p class="mini-seller"><i class="fa-regular fa-user"></i> Тимур</p>
+            </div>
+          </article>
+          <article class="book-card compact">
+            <a class="book-cover" href="pages/books.html"><img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg" alt="Deep Work китебинин мукабасы" loading="lazy"></a>
+            <div class="book-body">
+              <h3 class="book-title">Deep Work</h3>
+              <p class="book-author">Cal Newport</p>
+              <p class="rating" aria-label="Рейтинг 4.7"><span class="stars">★★★★★</span> 4.7</p>
+              <div class="book-row"><span class="book-price">900 сом</span></div>
+              <p class="mini-seller"><i class="fa-regular fa-user"></i> Нурбек</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КИТЕП САТУУ -->
+    <section class="container sell-banner-wrap" aria-labelledby="sell-title">
+      <div class="sell-banner">
+        <div class="sell-text">
+          <span class="eyebrow eyebrow-light"><i class="fa-solid fa-tag"></i> Сатуучу болуңуз</span>
+          <h2 id="sell-title">Китебиңизди сатыңыз</h2>
+          <p>Окубай калган же колдонбой калган китебиңизди башка окурманга сунуштаңыз.</p>
+          <a href="pages/sell.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-plus"></i> Китепти сатыкка коюу</a>
+        </div>
+        <div class="sell-art" aria-hidden="true">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <span class="sell-chip sc-1"><i class="fa-solid fa-circle-check"></i> Акысыз жарыя</span>
+          <span class="sell-chip sc-2"><i class="fa-solid fa-bolt"></i> 2 мүнөттө</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАНТИП ИШТЕЙТ -->
+    <section class="section how-section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head center">
+          <h2 id="how-title">Бул сайт кандай иштейт?</h2>
+          <p>Сатып алуучулар жана сатуучулар үчүн жөнөкөй кадамдар</p>
+        </div>
+        <div class="how-grid">
+          <article class="how-card">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Сатып алуучулар үчүн</h3>
+            <ol class="steps">
+              <li><span class="step-num">1</span><div><strong>Китепти тап</strong><p>Өзүңүзгө керектүү китепти издеңиз.</p></div></li>
+              <li><span class="step-num">2</span><div><strong>Сатуучу менен байланыш</strong><p>Сатуучу менен байланышып, маалымат алыңыз.</p></div></li>
+              <li><span class="step-num">3</span><div><strong>Китепти сатып ал</strong><p>Китепти алып, окуудан ырахат алыңыз.</p></div></li>
+            </ol>
+          </article>
+          <article class="how-card how-card-dark">
+            <h3><i class="fa-solid fa-tag"></i> Сатуучулар үчүн</h3>
+            <ol class="steps">
+              <li><span class="step-num">1</span><div><strong>Китепти кош</strong><p>Форманы толтуруп, сүрөтүн жүктөңүз.</p></div></li>
+              <li><span class="step-num">2</span><div><strong>Баасын белгилеп кой</strong><p>Китептин абалына жараша өзүңүз баа коюңуз.</p></div></li>
+              <li><span class="step-num">3</span><div><strong>Сатып алуучуну күт</strong><p>Кызыккандар сиз менен түз байланышат.</p></div></li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- САТУУЧУЛАР -->
+    <section class="section container" aria-labelledby="seller-title">
+      <div class="section-head center">
+        <h2 id="seller-title">Мыкты сатуучулар</h2>
+        <p>Ишенимдүү жана активдүү сатуучулар</p>
+      </div>
+      <div class="seller-grid">
+        <article class="seller-card">
+          <img src="https://i.pravatar.cc/160?img=15" alt="Эрлан" width="80" height="80">
+          <h3>Эрлан</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Бишкек</p>
+          <p class="sold">21 китеп сатылды</p>
+          <p class="rating"><span class="stars">★★★★★</span> 4.9</p>
+        </article>
+        <article class="seller-card">
+          <img src="https://i.pravatar.cc/160?img=32" alt="Айжан" width="80" height="80">
+          <h3>Айжан</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Каракол</p>
+          <p class="sold">15 китеп сатылды</p>
+          <p class="rating"><span class="stars">★★★★★</span> 4.9</p>
+        </article>
+        <article class="seller-card">
+          <img src="https://i.pravatar.cc/160?img=12" alt="Нурбек" width="80" height="80">
+          <h3>Нурбек</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Бишкек</p>
+          <p class="sold">12 китеп сатылды</p>
+          <p class="rating"><span class="stars">★★★★★</span> 4.8</p>
+        </article>
+        <article class="seller-card">
+          <img src="https://i.pravatar.cc/160?img=5" alt="Айгүл" width="80" height="80">
+          <h3>Айгүл</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Ош</p>
+          <p class="sold">8 китеп сатылды</p>
+          <p class="rating"><span class="stars">★★★★★</span> 4.6</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container" aria-label="Чакырык">
+      <div class="cta">
+        <div>
+          <h2>Текчеңизде окулган китептер барбы?</h2>
+          <p>Аларды азыр жарыялап, жаңы ээсин табыңыз.</p>
+        </div>
+        <a href="pages/login.html" class="btn btn-gold btn-lg">Азыр баштоо</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo light"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+        <p>Китептерди сатып алуу жана сатуу үчүн ыңгайлуу платформа.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Биз жөнүндө">
+        <h3>Биз жөнүндө</h3>
+        <a href="#">Биз жөнүндө</a>
+        <a href="#">Байланыш</a>
+        <a href="#">Эрежелер</a>
+      </nav>
+      <nav class="footer-col" aria-label="Колдонуучулар үчүн">
+        <h3>Колдонуучулар үчүн</h3>
+        <a href="pages/books.html">Китептер</a>
+        <a href="pages/sell.html">Китеп сатуу</a>
+        <a href="index.html#categories">Категориялар</a>
+        <a href="pages/profile.html">Менин аккаунтум</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Байланыш</h3>
+        <p><i class="fa-solid fa-phone"></i> +996 700 123 456</p>
+        <p><i class="fa-solid fa-envelope"></i> info@kitepmarket.kg</p>
+        <p><i class="fa-solid fa-location-dot"></i> Бишкек, Кыргызстан</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 KitepMarket. Бардык укуктар корголгон.</div></div>
+  </footer>
+</body>
+</html>

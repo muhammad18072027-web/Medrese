@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Китеп сатуу — KitepMarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Менюну ачуу же жабуу">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="KitepMarket — башкы бет"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+      <nav class="main-nav" aria-label="Негизги меню">
+        <ul>
+          <li><a href="../index.html">Башкы бет</a></li>
+          <li><a href="books.html">Китептер</a></li>
+          <li><a href="sell.html" class="active">Китеп сатуу</a></li>
+          <li><a href="../index.html#categories">Категориялар</a></li>
+          <li><a href="profile.html">Менин аккаунтум</a></li>
+          <li class="only-mobile"><a href="login.html">Кирүү</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="books.html" class="icon-btn" aria-label="Издөө"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="icon-btn" aria-label="Себет"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">2</span></a>
+        <a href="profile.html" class="icon-btn hide-xs" aria-label="Профиль"><i class="fa-regular fa-user"></i></a>
+        <a href="login.html" class="btn btn-primary btn-sm hide-xs">Кирүү</a>
+        <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <ol class="breadcrumbs" aria-label="Навигация"><li><a href="../index.html">Башкы бет</a></li><li>Китеп сатуу</li></ol>
+        <h1>Китепти сатыкка коюу</h1>
+        <p>Окубай калган же колдонбой калган китебиңизди башка окурманга сунуштаңыз.</p>
+      </div>
+    </section>
+
+    <div class="container page-section">
+      <div class="sell-layout">
+        <form class="form-card" action="sell.html" method="post" enctype="multipart/form-data">
+          <h2>Китеп жөнүндө маалымат</h2>
+          <p>Жылдызча (*) менен белгиленген талааларды толтуруңуз.</p>
+
+          <div class="form-grid">
+            <div class="form-legend"><i class="fa-solid fa-book"></i> Китеп</div>
+
+            <div class="field">
+              <label for="title">Китептин аталышы *</label>
+              <input type="text" id="title" name="title" placeholder="Мисалы: Atomic Habits" required>
+            </div>
+            <div class="field">
+              <label for="author">Автору *</label>
+              <input type="text" id="author" name="author" placeholder="Мисалы: James Clear" required>
+            </div>
+            <div class="field">
+              <label for="category">Категория *</label>
+              <select id="category" name="category" required>
+                <option value="" selected disabled>Категорияны тандаңыз</option>
+                <option>Кыргыз адабияты</option>
+                <option>Чет элдик адабият</option>
+                <option>Бизнес</option>
+                <option>Психология</option>
+                <option>IT жана технология</option>
+                <option>Тарых</option>
+                <option>Балдар адабияты</option>
+                <option>Окуу китептери</option>
+                <option>Роман</option>
+                <option>Детектив</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="price">Баасы (сом) *</label>
+              <input type="number" id="price" name="price" min="1" placeholder="850" required>
+            </div>
+            <div class="field full">
+              <label for="condition">Китептин абалы *</label>
+              <select id="condition" name="condition" required>
+                <option value="" selected disabled>Абалын тандаңыз</option>
+                <option>Жаңы</option>
+                <option>Абдан жакшы</option>
+                <option>Жакшы</option>
+                <option>Колдонулган</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="description">Китеп жөнүндө маалымат *</label>
+              <textarea id="description" name="description" placeholder="Китептин абалы, басмасы, чыккан жылы, кемчиликтери ж.б." required></textarea>
+            </div>
+            <div class="field full">
+              <label for="cover">Китептин сүрөтү</label>
+              <label class="dropzone" for="cover">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <strong>Сүрөттү тандаңыз</strong>
+                <span>JPG же PNG, 5 МБга чейин</span>
+                <input type="file" id="cover" name="cover" accept="image/*">
+              </label>
+            </div>
+
+            <div class="form-legend"><i class="fa-solid fa-user"></i> Сатуучу</div>
+
+            <div class="field">
+              <label for="seller">Сатуучунун аты *</label>
+              <input type="text" id="seller" name="seller" placeholder="Аты-жөнүңүз" required>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон номери *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+996 700 123 456" required>
+            </div>
+            <div class="field full">
+              <label for="city">Шаар *</label>
+              <select id="city" name="city" required>
+                <option value="" selected disabled>Шаарды тандаңыз</option>
+                <option>Бишкек</option><option>Ош</option><option>Жалал-Абад</option>
+                <option>Каракол</option><option>Нарын</option><option>Талас</option>
+                <option>Баткен</option><option>Токмок</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg"><i class="fa-solid fa-paper-plane"></i> Китепти жарыялоо</button>
+            <a href="books.html" class="btn btn-outline btn-lg">Жокко чыгаруу</a>
+          </div>
+        </form>
+
+        <aside class="side-card" aria-label="Кеңештер">
+          <h3>Тез сатуу үчүн кеңештер</h3>
+          <ul>
+            <li><i class="fa-solid fa-camera"></i><span>Мукабанын жарык жерде тартылган даана сүрөтүн жүктөңүз.</span></li>
+            <li><i class="fa-solid fa-circle-info"></i><span>Китептин абалын так жазыңыз: барактары, мукабасы, жазуулары.</span></li>
+            <li><i class="fa-solid fa-coins"></i><span>Окшош китептердин баасын салыштырып, адилет баа коюңуз.</span></li>
+            <li><i class="fa-solid fa-phone"></i><span>Иштеп жаткан телефон номерин жазыңыз.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo light"><i class="fa-solid fa-book-open"></i><span>Kitep<b>Market</b></span></a>
+        <p>Китептерди сатып алуу жана сатуу үчүн ыңгайлуу платформа.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Биз жөнүндө">
+        <h3>Биз жөнүндө</h3>
+        <a href="#">Биз жөнүндө</a>
+        <a href="#">Байланыш</a>
+        <a href="#">Эрежелер</a>
+      </nav>
+      <nav class="footer-col" aria-label="Колдонуучулар үчүн">
+        <h3>Колдонуучулар үчүн</h3>
+        <a href="books.html">Китептер</a>
+        <a href="sell.html">Китеп сатуу</a>
+        <a href="../index.html#categories">Категориялар</a>
+        <a href="profile.html">Менин аккаунтум</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Байланыш</h3>
+        <p><i class="fa-solid fa-phone"></i> +996 700 123 456</p>
+        <p><i class="fa-solid fa-envelope"></i> info@kitepmarket.kg</p>
+        <p><i class="fa-solid fa-location-dot"></i> Бишкек, Кыргызстан</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 KitepMarket. Бардык укуктар корголгон.</div></div>
+  </footer>
+</body>
+</html>
