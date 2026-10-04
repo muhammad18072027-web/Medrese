@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Market — Машина сатуу сайты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo">AUTO<span>MARKET</span></a>
+
+            <nav class="menu">
+                <a href="#home">Башкы бет</a>
+                <a href="#cars">Машиналар</a>
+                <a href="#categories">Категориялар</a>
+                <a href="#sell">Машина сатуу</a>
+                <a href="#contact">Байланыш</a>
+            </nav>
+
+            <a href="#sell" class="header-btn">Машина сатуу</a>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <p class="small-title">🚘 AUTO MARKET</p>
+
+                <h1>
+                    Өзүңө ылайыктуу
+                    <span>машинаны тап</span>
+                </h1>
+
+                <p class="hero-description">
+                    Жаңы жана колдонулган машиналарды оңой таап,
+                    өзүңүздүн машинаңызды тез жана ыңгайлуу сатыңыз.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#cars" class="btn primary-btn">
+                        Машиналарды көрүү
+                    </a>
+
+                    <a href="#sell" class="btn secondary-btn">
+                        Машина сатуу
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80"
+                     alt="Luxury car">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="container">
+
+            <div class="search-box">
+
+                <div class="input-group">
+                    <label>Марка</label>
+                    <select>
+                        <option>Бардык маркалар</option>
+                        <option>Toyota</option>
+                        <option>BMW</option>
+                        <option>Mercedes-Benz</option>
+                        <option>Lexus</option>
+                        <option>Honda</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Модель</label>
+                    <input type="text" placeholder="Мисалы: Camry">
+                </div>
+
+                <div class="input-group">
+                    <label>Баасы</label>
+                    <input type="number" placeholder="Максималдуу баа">
+                </div>
+
+                <div class="input-group">
+                    <label>Категория</label>
+                    <select>
+                        <option>Бардыгы</option>
+                        <option>Эконом</option>
+                        <option>Комфорт</option>
+                        <option>Люкс</option>
+                    </select>
+                </div>
+
+                <button class="search-btn">Издөө</button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- STATISTICS -->
+    <section class="statistics">
+        <div class="container stats">
+
+            <div class="stat">
+                <h2>1000+</h2>
+                <p>Машина</p>
+            </div>
+
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Сатылган машина</p>
+            </div>
+
+            <div class="stat">
+                <h2>800+</h2>
+                <p>Колдонуучу</p>
+            </div>
+
+            <div class="stat">
+                <h2>24/7</h2>
+                <p>Колдоо кызматы</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories section" id="categories">
+        <div class="container">
+
+            <div class="section-title">
+                <p>МАШИНА ТАНДОО</p>
+                <h2>Категориялар</h2>
+                <span>Өзүңүзгө ылайыктуу категорияны тандаңыз</span>
+            </div>
+
+            <div class="category-grid">
+
+                <div class="category-card economy">
+                    <div class="category-icon">🚗</div>
+                    <h3>Эконом</h3>
+                    <p>
+                        Үнөмдүү жана жеткиликтүү машиналар.
+                    </p>
+                    <a href="#cars">Машиналарды көрүү →</a>
+                </div>
+
+                <div class="category-card comfort">
+                    <div class="category-icon">🚘</div>
+                    <h3>Комфорт</h3>
+                    <p>
+                        Үй-бүлө жана күнүмдүк колдонуу үчүн ыңгайлуу машиналар.
+                    </p>
+                    <a href="#cars">Машиналарды көрүү →</a>
+                </div>
+
+                <div class="category-card luxury">
+                    <div class="category-icon">🏎️</div>
+                    <h3>Люкс</h3>
+                    <p>
+                        Премиум класс жана жогорку деңгээлдеги машиналар.
+                    </p>
+                    <a href="#cars">Машиналарды көрүү →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CARS -->
+    <section class="cars section" id="cars">
+        <div class="container">
+
+            <div class="section-title">
+                <p>ЖАҢЫ ЖАРЫЯЛАР</p>
+                <h2>Машиналар</h2>
+                <span>Акыркы кошулган машиналар</span>
+            </div>
+
+            <div class="cars-grid">
+
+                <!-- CAR 1 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=800&q=80"
+                             alt="Toyota Prius">
+                        <span class="badge economy-badge">Эконом</span>
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Toyota Prius</h3>
+                        <p class="location">📍 Бишкек</p>
+
+                        <div class="car-details">
+                            <span>📅 2018</span>
+                            <span>⚙️ Автомат</span>
+                            <span>⛽ Гибрид</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>$15,500</strong>
+                            <a href="#">Толук маалымат</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- CAR 2 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1525609004556-c46c7dcf8e9d?auto=format&fit=crop&w=800&q=80"
+                             alt="Toyota Camry">
+                        <span class="badge comfort-badge">Комфорт</span>
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Toyota Camry</h3>
+                        <p class="location">📍 Бишкек</p>
+
+                        <div class="car-details">
+                            <span>📅 2021</span>
+                            <span>⚙️ Автомат</span>
+                            <span>⛽ Бензин</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>$28,000</strong>
+                            <a href="#">Толук маалымат</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- CAR 3 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80"
+                             alt="Mercedes Benz">
+                        <span class="badge luxury-badge">Люкс</span>
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Mercedes-Benz E-Class</h3>
+                        <p class="location">📍 Бишкек</p>
+
+                        <div class="car-details">
+                            <span>📅 2022</span>
+                            <span>⚙️ Автомат</span>
+                            <span>⛽ Бензин</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>$48,000</strong>
+                            <a href="#">Толук маалымат</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- CAR 4 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80"
+                             alt="BMW 5 Series">
+                        <span class="badge luxury-badge">Люкс</span>
+                    </div>
+
+                    <div class="car-info">
+                        <h3>BMW 5 Series</h3>
+                        <p class="location">📍 Ош</p>
+
+                        <div class="car-details">
+                            <span>📅 2020</span>
+                            <span>⚙️ Автомат</span>
+                            <span>⛽ Бензин</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>$42,500</strong>
+                            <a href="#">Толук маалымат</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- CAR 5 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=800&q=80"
+                             alt="Honda CR-V">
+                        <span class="badge comfort-badge">Комфорт</span>
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Honda CR-V</h3>
+                        <p class="location">📍 Бишкек</p>
+
+                        <div class="car-details">
+                            <span>📅 2019</span>
+                            <span>⚙️ Автомат</span>
+                            <span>⛽ Бензин</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>$23,800</strong>
+                            <a href="#">Толук маалымат</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- CAR 6 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80"
+                             alt="Lexus LX">
+                        <span class="badge luxury-badge">Люкс</span>
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Lexus LX</h3>
+                        <p class="location">📍 Бишкек</p>
+
+                        <div class="car-details">
+                            <span>📅 2023</span>
+                            <span>⚙️ Автомат</span>
+                            <span>⛽ Бензин</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>$85,000</strong>
+                            <a href="#">Толук маалымат</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ADVANTAGES -->
+    <section class="advantages section">
+        <div class="container">
+
+            <div class="section-title">
+                <p>ЭМНЕ ҮЧҮН БИЗ?</p>
+                <h2>Биздин артыкчылыктар</h2>
+            </div>
+
+            <div class="advantages-grid">
+
+                <div class="advantage">
+                    <div class="advantage-icon">⚡</div>
+                    <h3>Тез сатуу</h3>
+                    <p>
+                        Машинаңызды миңдеген сатып алуучуларга көрсөтүңүз.
+                    </p>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage-icon">🔒</div>
+                    <h3>Коопсуз байланыш</h3>
+                    <p>
+                        Сатып алуучу менен түз жана ыңгайлуу байланыш түзүңүз.
+                    </p>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage-icon">👥</div>
+                    <h3>Көп сатып алуучу</h3>
+                    <p>
+                        Көптөгөн адамдар сиздин жарыяңызды көрө алышат.
+                    </p>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage-icon">📱</div>
+                    <h3>Оңой жарыя берүү</h3>
+                    <p>
+                        Машина тууралуу маалыматтарды киргизип, жарыяңызды жайгаштырыңыз.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SELL CAR -->
+    <section class="sell section" id="sell">
+        <div class="container">
+
+            <div class="sell-wrapper">
+
+                <div class="sell-text">
+                    <p class="small-title">МАШИНА САТУУ</p>
+
+                    <h2>
+                        Машинаңызды
+                        <span>биз менен сатыңыз</span>
+                    </h2>
+
+                    <p>
+                        Машинаңыз тууралуу маалыматтарды толтуруп,
+                        потенциалдуу сатып алуучуларга сунуштаңыз.
+                    </p>
+
+                    <ul>
+                        <li>✓ Жөнөкөй форма</li>
+                        <li>✓ Машинанын сүрөтүн кошуу</li>
+                        <li>✓ Категория тандоо</li>
+                        <li>✓ Бааны өзүңүз аныктоо</li>
+                    </ul>
+                </div>
+
+
+                <form class="sell-form">
+
+                    <h3>Машина тууралуу маалымат</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Маркасы</label>
+                            <input type="text" placeholder="Мисалы: Toyota">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Модели</label>
+                            <input type="text" placeholder="Мисалы: Camry">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Чыккан жылы</label>
+                            <input type="number" placeholder="2020">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Баасы ($)</label>
+                            <input type="number" placeholder="25000">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Пробег</label>
+                            <input type="text" placeholder="85000 км">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Категория</label>
+                            <select>
+                                <option>Эконом</option>
+                                <option>Комфорт</option>
+                                <option>Люкс</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Күйүүчү май</label>
+                            <select>
+                                <option>Бензин</option>
+                                <option>Дизель</option>
+                                <option>Гибрид</option>
+                                <option>Электр</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Коробка</label>
+                            <select>
+                                <option>Автомат</option>
+                                <option>Механика</option>
+                                <option>Робот</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Шаар</label>
+                        <input type="text" placeholder="Бишкек">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Телефон номери</label>
+                        <input type="tel" placeholder="+996 700 000 000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Машинанын сүрөтү</label>
+                        <input type="file">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Машина тууралуу маалымат</label>
+                        <textarea rows="5"
+                                  placeholder="Машинаңыз тууралуу маалымат жазыңыз..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Жарыяны жарыялоо
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <p>БАЙЛАНЫШ</p>
+                <h2>Биз менен байланышыңыз</h2>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <div>📞</div>
+                    <h3>Телефон</h3>
+                    <p>+996 700 000 000</p>
+                </div>
+
+                <div class="contact-card">
+                    <div>📧</div>
+                    <h3>Email</h3>
+                    <p>info@automarket.kg</p>
+                </div>
+
+                <div class="contact-card">
+                    <div>📍</div>
+                    <h3>Дарек</h3>
+                    <p>Бишкек, Кыргызстан</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div>
+                <a href="#" class="logo">
+                    AUTO<span>MARKET</span>
+                </a>
+
+                <p>
+                    Машина сатып алуу жана сатуу үчүн
+                    заманбап платформа.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Меню</h3>
+                <a href="#home">Башкы бет</a>
+                <a href="#cars">Машиналар</a>
+                <a href="#categories">Категориялар</a>
+                <a href="#sell">Машина сатуу</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Байланыш</h3>
+                <p>📞 +996 700 000 000</p>
+                <p>📧 info@automarket.kg</p>
+                <p>📍 Бишкек, Кыргызстан</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 AUTO MARKET. Бардык укуктар корголгон.
+        </div>
+    </footer>
+
+</body>
+</html>
