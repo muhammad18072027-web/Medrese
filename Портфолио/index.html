@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мугалим Мухаммаддын жеке портфолио сайты">
+  <title>Muhammad — Teacher Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== 1. HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo">Muhammad<span>.</span></a>
+
+      <!-- Мобилдик менюну ачуу/жабуу (JS жок) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="burger" aria-label="Менюну ачуу">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Башкы навигация">
+        <ul>
+          <li><a href="#home">Башкы бет</a></li>
+          <li><a href="#about">Мен жөнүндө</a></li>
+          <li><a href="#skills">Көндүмдөр</a></li>
+          <li><a href="#experience">Тажрыйба</a></li>
+          <li><a href="#subjects">Сабактар</a></li>
+          <li><a href="#contact">Байланыш</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== 2. HERO ========== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">👋 Кош келиңиз</p>
+          <h1>Салам, мен <span class="accent">Мухаммадмын</span><br>Мен — мугалиммин</h1>
+          <p class="lead">Окуучуларга сапаттуу билим берип, алардын келечегине жол көрсөтүүгө аракет кылам.</p>
+          <div class="btn-group">
+            <a href="#about" class="btn btn-primary">Мен жөнүндө</a>
+            <a href="#contact" class="btn btn-outline">Байланышуу</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <!-- Сүрөт: images/profile.jpg. Жок болсо градиент placeholder көрүнөт -->
+          <div class="photo-frame" role="img" aria-label="Мугалим Мухаммаддын сүрөтү">
+            <span class="photo-hint">👤<small>Сүрөт ушул жерде</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Мен жөнүндө</h2>
+          <p>Мугалим жана тарбиячы катары жолум</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-main">
+            <h3>Мухаммад</h3>
+            <p class="role">Мугалим</p>
+            <p>Мен — окуучулардын билимге болгон кызыгуусун ойгото билген, ар бир баланын мүмкүнчүлүгүн ачууга умтулган мугалиммин. Сабакты түшүнүктүү, кызыктуу жана заманбап ыкмалар менен өткөрүүнү жакшы көрөм.</p>
+          </div>
+
+          <div class="about-points">
+            <article class="mini-card">
+              <h4>🎯 Окутуудагы максаттарым</h4>
+              <p>Окуучуларга терең билим берип, өз алдынча ой жүгүртүүгө жана жаңы нерселерди үйрөнүүгө көндүрүү.</p>
+            </article>
+            <article class="mini-card">
+              <h4>🤝 Иштөө стилим</h4>
+              <p>Ар бир окуучуга жеке мамиле, ачык баарлашуу, сыйлоо жана колдоо атмосферасын түзүү.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. SKILLS ========== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Көндүмдөр</h2>
+          <p>Күчтүү жактарым жана кесиптик билгичтигим</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card skill-card">
+            <div class="icon">📚</div>
+            <h3>Окутуу</h3>
+            <p>Татаал темаларды жөнөкөй жана түшүнүктүү тилде түшүндүрүү.</p>
+          </article>
+          <article class="card skill-card">
+            <div class="icon">💻</div>
+            <h3>Компьютердик сабаттуулук</h3>
+            <p>Заманбап технологияларды жана санариптик куралдарды сабакта колдонуу.</p>
+          </article>
+          <article class="card skill-card">
+            <div class="icon">🎯</div>
+            <h3>Окуучулар менен иштөө</h3>
+            <p>Ар бир окуучунун өзгөчөлүгүн эске алып, жеке мамиле кылуу.</p>
+          </article>
+          <article class="card skill-card">
+            <div class="icon">💡</div>
+            <h3>Чыгармачылык</h3>
+            <p>Сабакты кызыктуу кылуу үчүн жаңы идеяларды жана оюндарды колдонуу.</p>
+          </article>
+          <article class="card skill-card">
+            <div class="icon">🗣</div>
+            <h3>Коммуникация</h3>
+            <p>Окуучулар, ата-энелер жана кесиптештер менен ачык жана сыпаа баарлашуу.</p>
+          </article>
+          <article class="card skill-card">
+            <div class="icon">📖</div>
+            <h3>Сабак даярдоо</h3>
+            <p>Так пландалган, максаттуу жана структураланган сабактарды даярдоо.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. EXPERIENCE (TIMELINE) ========== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Тажрыйба</h2>
+          <p>Иш жолумдун негизги баскычтары</p>
+        </div>
+
+        <!-- Жаңы жыл кошуу үчүн <article class="timeline-item"> блогун көчүрүп алыңыз -->
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="year">2024</span>
+            <div class="timeline-card">
+              <h3>Мугалим</h3>
+              <p>Мектепте мугалимдик иш башталып, окуучулар менен түз иштөө тажрыйбасы топтолду.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="year">2025</span>
+            <div class="timeline-card">
+              <h3>Окуучулар менен долбоорлор</h3>
+              <p>Окуучулар менен чогуу практикалык долбоорлорду жана иш-чараларды уюштуруу.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="year">2026</span>
+            <div class="timeline-card">
+              <h3>Заманбап окутуу ыкмалары</h3>
+              <p>Санариптик технологияларды жана интерактивдүү ыкмаларды сабакка киргизүү.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. SUBJECTS ========== -->
+    <section id="subjects" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Сабактар</h2>
+          <p>Мен окуткан предметтер</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card subject-card">
+            <div class="subject-icon">➗</div>
+            <h3>Математика</h3>
+            <p>Логикалык ой жүгүртүү жана эсептөө көндүмдөрү.</p>
+          </article>
+          <article class="card subject-card">
+            <div class="subject-icon">🖥</div>
+            <h3>Информатика</h3>
+            <p>Компьютер, программалоо жана санариптик сабаттуулук.</p>
+          </article>
+          <article class="card subject-card">
+            <div class="subject-icon">🌍</div>
+            <h3>Англис тили</h3>
+            <p>Сүйлөө, окуу жана жазуу көндүмдөрү.</p>
+          </article>
+          <article class="card subject-card">
+            <div class="subject-icon">📝</div>
+            <h3>Кыргыз тили</h3>
+            <p>Туура жазуу, адабий тил жана сөз байлыгы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. PROJECTS / ACHIEVEMENTS ========== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Долбоорлор жана жетишкендиктер</h2>
+          <p>Жасаган иштерим жана окуучулардын ийгиликтери</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card project-card">
+            <div class="project-img grad-1">🧪</div>
+            <div class="project-body">
+              <h3>Окуучулардын долбоорлору</h3>
+              <p>Окуучулар өз алдынча даярдаган кызыктуу жана пайдалуу иштер.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-img grad-2">🏆</div>
+            <div class="project-body">
+              <h3>Олимпиадалар</h3>
+              <p>Райондук жана облустук олимпиадаларга даярдоо жана катышуу.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-img grad-3">🌟</div>
+            <div class="project-body">
+              <h3>Ийгиликтүү окуучулар</h3>
+              <p>Жогорку жыйынтыкка жетишкен жана сыйлыктарды алган окуучулар.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-img grad-4">🎉</div>
+            <div class="project-body">
+              <h3>Мектептик иш-чаралар</h3>
+              <p>Мектеп жашоосун кызыктуу кылган концерттер жана сынактар.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. TESTIMONIALS ========== -->
+    <section id="testimonials" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Пикирлер</h2>
+          <p>Окуучулар жана кесиптештер айткандар</p>
+        </div>
+
+        <div class="grid grid-3">
+          <blockquote class="card testimonial">
+            <p>“Мугалимибиз сабакты абдан түшүнүктүү өткөрөт.”</p>
+            <footer><strong>Айгерим</strong><span>Окуучу</span></footer>
+          </blockquote>
+          <blockquote class="card testimonial">
+            <p>“Ар бир окуучуга көңүл буруп, дайыма колдоп турат.”</p>
+            <footer><strong>Бекзат</strong><span>Окуучу</span></footer>
+          </blockquote>
+          <blockquote class="card testimonial">
+            <p>“Жоопкерчиликтүү, чыгармачыл жана жакшы кесиптеш.”</p>
+            <footer><strong>Нургүл эже</strong><span>Кесиптеш</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 9. CONTACT ========== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Байланыш</h2>
+          <p>Суроолоруңуз болсо, мага жазыңыз</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info card">
+            <ul>
+              <li><span class="c-icon">📞</span><div><strong>Телефон</strong><a href="tel:+996000000000">+996 000 000 000</a></div></li>
+              <li><span class="c-icon">📧</span><div><strong>Email</strong><a href="mailto:muhammad@example.com">muhammad@example.com</a></div></li>
+              <li><span class="c-icon">📍</span><div><strong>Дарек</strong><span>Бишкек, Кыргызстан</span></div></li>
+              <li><span class="c-icon">✈️</span><div><strong>Telegram</strong><a href="https://t.me/" target="_blank" rel="noopener">@muhammad</a></div></li>
+              <li><span class="c-icon">📸</span><div><strong>Instagram</strong><a href="https://instagram.com/" target="_blank" rel="noopener">@muhammad</a></div></li>
+            </ul>
+          </div>
+
+          <!-- Форма frontend гана (JS жок, серверге туташкан эмес) -->
+          <form class="contact-form card" action="#" method="post">
+            <label for="name">Аты</label>
+            <input type="text" id="name" name="name" placeholder="Атыңыз" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+
+            <label for="message">Билдирүү</label>
+            <textarea id="message" name="message" rows="5" placeholder="Билдирүүңүздү жазыңыз..." required></textarea>
+
+            <button type="submit" class="btn btn-primary">Жөнөтүү</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== 10. FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Muhammad — Teacher Portfolio</p>
+      <ul class="socials">
+        <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

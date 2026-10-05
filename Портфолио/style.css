@@ -1,0 +1,345 @@
+/* =========================================================
+   1. ӨЗГӨРМӨЛӨР ЖАНА БАЗАЛЫК СТИЛДЕР
+   ========================================================= */
+:root {
+  --blue-900: #0b2a5b;
+  --blue-700: #1457c4;
+  --blue-600: #1d6fe8;
+  --blue-100: #e6f0ff;
+  --blue-50:  #f3f8ff;
+  --white:    #ffffff;
+  --text:     #1f2a44;
+  --muted:    #5b6b86;
+  --border:   #dbe6f7;
+
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(20, 87, 196, 0.10);
+  --shadow-hover: 0 18px 40px rgba(20, 87, 196, 0.22);
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* туруктуу header астында калбасын */
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, .logo { font-family: "Poppins", "Segoe UI", sans-serif; line-height: 1.25; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+
+.container { width: min(1140px, 92%); margin-inline: auto; }
+
+/* =========================================================
+   2. ЖАЛПЫ КОМПОНЕНТТЕР (section, card, button)
+   ========================================================= */
+.section { padding: 90px 0; }
+.section-alt { background: var(--blue-50); }
+
+.section-head { text-align: center; margin-bottom: 50px; }
+.section-head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--blue-900); }
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 60px; height: 4px;
+  margin: 14px auto 0;
+  border-radius: 4px;
+  background: var(--blue-600);
+}
+.section-head p { color: var(--muted); margin-top: 14px; }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+.grid { display: grid; gap: 26px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid var(--blue-600);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-primary { background: var(--blue-600); color: var(--white); }
+.btn-primary:hover { background: var(--blue-700); border-color: var(--blue-700); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.btn-outline { background: transparent; color: var(--blue-600); }
+.btn-outline:hover { background: var(--blue-600); color: var(--white); transform: translateY(-3px); }
+
+/* =========================================================
+   3. HEADER / NAVIGATION
+   ========================================================= */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+
+.logo { font-size: 1.6rem; font-weight: 700; color: var(--blue-900); }
+.logo span { color: var(--blue-600); }
+
+.main-nav ul { display: flex; gap: 6px; }
+.main-nav a {
+  display: block; padding: 8px 16px;
+  border-radius: 50px; font-weight: 500; color: var(--text);
+  transition: var(--transition);
+}
+.main-nav a:hover { background: var(--blue-100); color: var(--blue-700); }
+
+/* Мобилдик меню кнопкасы (burger) */
+.menu-toggle { display: none; }
+.burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
+.burger span { width: 26px; height: 3px; background: var(--blue-900); border-radius: 3px; transition: var(--transition); }
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+.hero {
+  padding: 80px 0 100px;
+  background:
+    radial-gradient(circle at 85% 20%, var(--blue-100), transparent 45%),
+    linear-gradient(180deg, var(--blue-50), var(--white));
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 50px; }
+
+.eyebrow {
+  display: inline-block; padding: 6px 16px; margin-bottom: 18px;
+  background: var(--blue-100); color: var(--blue-700);
+  border-radius: 50px; font-weight: 500; font-size: 0.9rem;
+}
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--blue-900); margin-bottom: 20px; }
+.accent { color: var(--blue-600); }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 520px; margin-bottom: 32px; }
+.btn-group { display: flex; flex-wrap: wrap; gap: 16px; }
+
+.hero-photo { display: flex; justify-content: center; }
+.photo-frame {
+  position: relative;
+  width: min(380px, 100%); aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  /* Биринчи катмар — сүрөт, экинчиси — сүрөт жок болгондогу placeholder */
+  background:
+    url("images/profile.jpg") center / cover no-repeat,
+    linear-gradient(145deg, var(--blue-600), var(--blue-900));
+  box-shadow: 0 25px 60px rgba(20, 87, 196, 0.30);
+  border: 6px solid var(--white);
+  display: flex; align-items: center; justify-content: center;
+}
+.photo-frame::after { /* сүрөттүн артындагы декоративдик рамка */
+  content: ""; position: absolute; inset: 18px -18px -18px 18px;
+  border: 3px solid var(--blue-600); border-radius: 28px; z-index: -1; opacity: 0.35;
+}
+.photo-hint { display: flex; flex-direction: column; align-items: center; font-size: 5rem; color: rgba(255,255,255,0.85); z-index: -1; }
+.photo-hint small { font-size: 0.95rem; font-family: "Inter", sans-serif; }
+
+/* =========================================================
+   5. ABOUT
+   ========================================================= */
+.about-card {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  padding: 40px; background: var(--white);
+  border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.about-main h3 { font-size: 2rem; color: var(--blue-900); }
+.role {
+  display: inline-block; margin: 8px 0 18px; padding: 4px 16px;
+  background: var(--blue-600); color: var(--white); border-radius: 50px; font-weight: 500;
+}
+.about-main p { color: var(--muted); }
+.about-points { display: grid; gap: 20px; }
+.mini-card {
+  padding: 22px; background: var(--blue-50);
+  border-left: 5px solid var(--blue-600); border-radius: 12px;
+  transition: var(--transition);
+}
+.mini-card:hover { transform: translateX(6px); background: var(--blue-100); }
+.mini-card h4 { color: var(--blue-900); margin-bottom: 6px; }
+.mini-card p { color: var(--muted); font-size: 0.95rem; }
+
+/* =========================================================
+   6. SKILLS
+   ========================================================= */
+.skill-card { padding: 34px 28px; text-align: center; }
+.icon {
+  display: grid; place-items: center;
+  width: 70px; height: 70px; margin: 0 auto 18px;
+  font-size: 2rem; background: var(--blue-100); border-radius: 20px;
+  transition: var(--transition);
+}
+.skill-card:hover .icon { background: var(--blue-600); transform: rotate(-6deg) scale(1.08); }
+.skill-card h3 { color: var(--blue-900); margin-bottom: 10px; font-size: 1.15rem; }
+.skill-card p { color: var(--muted); font-size: 0.95rem; }
+
+/* =========================================================
+   7. EXPERIENCE (TIMELINE)
+   ========================================================= */
+.timeline { position: relative; max-width: 760px; margin: 0 auto; padding-left: 40px; }
+.timeline::before { /* тик сызык */
+  content: ""; position: absolute; left: 12px; top: 0; bottom: 0;
+  width: 4px; background: var(--blue-100); border-radius: 4px;
+}
+.timeline-item { position: relative; margin-bottom: 34px; }
+.timeline-item::before { /* тегерек чекит */
+  content: ""; position: absolute; left: -38px; top: 8px;
+  width: 20px; height: 20px; background: var(--blue-600);
+  border: 4px solid var(--white); border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--blue-600);
+}
+.year {
+  display: inline-block; margin-bottom: 10px; padding: 4px 18px;
+  background: var(--blue-600); color: var(--white);
+  font-family: "Poppins", sans-serif; font-weight: 600; border-radius: 50px;
+}
+.timeline-card {
+  padding: 24px 28px; background: var(--white);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); transition: var(--transition);
+}
+.timeline-card:hover { transform: translateX(8px); box-shadow: var(--shadow-hover); }
+.timeline-card h3 { color: var(--blue-900); margin-bottom: 6px; }
+.timeline-card p { color: var(--muted); }
+
+/* =========================================================
+   8. SUBJECTS
+   ========================================================= */
+.subject-card { padding: 32px 22px; text-align: center; border-top: 5px solid var(--blue-600); }
+.subject-icon { font-size: 2.6rem; margin-bottom: 14px; }
+.subject-card h3 { color: var(--blue-900); margin-bottom: 8px; }
+.subject-card p { color: var(--muted); font-size: 0.95rem; }
+
+/* =========================================================
+   9. PROJECTS / ACHIEVEMENTS
+   ========================================================= */
+.project-card { overflow: hidden; }
+.project-img {
+  display: grid; place-items: center; height: 160px;
+  font-size: 3.4rem; color: var(--white); transition: var(--transition);
+}
+.project-card:hover .project-img { transform: scale(1.06); }
+.grad-1 { background: linear-gradient(135deg, #1d6fe8, #5aa2ff); }
+.grad-2 { background: linear-gradient(135deg, #0b2a5b, #1d6fe8); }
+.grad-3 { background: linear-gradient(135deg, #1457c4, #66b3ff); }
+.grad-4 { background: linear-gradient(135deg, #2a7fff, #0b2a5b); }
+.project-body { padding: 22px; }
+.project-body h3 { color: var(--blue-900); font-size: 1.1rem; margin-bottom: 8px; }
+.project-body p { color: var(--muted); font-size: 0.93rem; }
+
+/* =========================================================
+   10. TESTIMONIALS
+   ========================================================= */
+.testimonial { position: relative; padding: 36px 28px 28px; }
+.testimonial::before {
+  content: "“"; position: absolute; top: -6px; left: 20px;
+  font-family: Georgia, serif; font-size: 5rem; color: var(--blue-100); line-height: 1;
+}
+.testimonial p { position: relative; font-size: 1.05rem; font-style: italic; margin-bottom: 22px; }
+.testimonial footer { display: flex; flex-direction: column; border-top: 1px solid var(--border); padding-top: 14px; }
+.testimonial strong { color: var(--blue-900); }
+.testimonial span { color: var(--blue-600); font-size: 0.9rem; }
+
+/* =========================================================
+   11. CONTACT
+   ========================================================= */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; align-items: start; }
+.contact-info, .contact-form { padding: 34px; }
+.contact-info:hover, .contact-form:hover { transform: none; }
+
+.contact-info li { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.contact-info li:last-child { border-bottom: 0; }
+.c-icon {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 46px; height: 46px; background: var(--blue-100); border-radius: 14px; font-size: 1.3rem;
+}
+.contact-info strong { display: block; color: var(--blue-900); }
+.contact-info a, .contact-info span:not(.c-icon) { color: var(--muted); }
+.contact-info a:hover { color: var(--blue-600); }
+
+.contact-form label { display: block; margin: 16px 0 6px; font-weight: 600; color: var(--blue-900); }
+.contact-form label:first-child { margin-top: 0; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 14px 16px;
+  font: inherit; color: var(--text);
+  background: var(--blue-50); border: 2px solid var(--border); border-radius: 12px;
+  transition: var(--transition);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; border-color: var(--blue-600); background: var(--white);
+  box-shadow: 0 0 0 4px rgba(29, 111, 232, 0.15);
+}
+.contact-form textarea { resize: vertical; }
+.contact-form .btn { margin-top: 22px; width: 100%; }
+
+/* =========================================================
+   12. FOOTER
+   ========================================================= */
+.site-footer { background: var(--blue-900); color: #cfe0ff; padding: 30px 0; }
+.footer-wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.socials { display: flex; gap: 20px; flex-wrap: wrap; }
+.socials a { color: #cfe0ff; transition: var(--transition); }
+.socials a:hover { color: var(--white); text-decoration: underline; }
+
+/* =========================================================
+   13. RESPONSIVE (планшет жана телефон)
+   ========================================================= */
+
+/* Планшет */
+@media (max-width: 992px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .lead { margin-inline: auto; }
+  .btn-group { justify-content: center; }
+  .hero-photo { order: -1; }
+  .photo-frame { width: min(300px, 80%); }
+  .about-card, .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Телефон: бургер меню */
+@media (max-width: 768px) {
+  .burger { display: flex; }
+
+  .main-nav {
+    position: absolute; top: 72px; left: 0; right: 0;
+    background: var(--white); border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+  }
+  .main-nav ul { flex-direction: column; padding: 10px 4%; gap: 0; }
+  .main-nav a { padding: 14px 10px; border-radius: 10px; }
+
+  .menu-toggle:checked ~ .main-nav { max-height: 420px; }
+  .menu-toggle:checked + .burger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .menu-toggle:checked + .burger span:nth-child(2) { opacity: 0; }
+  .menu-toggle:checked + .burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .section { padding: 64px 0; }
+  .about-card { padding: 26px; }
+  .footer-wrap { flex-direction: column; text-align: center; }
+}
+
+/* Кичинекей телефондор */
+@media (max-width: 560px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .btn { width: 100%; text-align: center; }
+  .contact-info, .contact-form { padding: 24px; }
+}
