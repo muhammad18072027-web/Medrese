@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Исламий Билим — ислам боюнча билимиңди сынап, билимиңди арттыр.">
+  <title>Исламий Билим — Билимиңди сынап көр!</title>
+
+  <!-- Шрифттер: Montserrat/Inter (кирилл тамгаларын колдойт), Amiri (араб жазуусу үчүн) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">☪ ИСЛАМИЙ БИЛИМ</a>
+
+      <!-- Мобилдик меню (JavaScript'сиз): checkbox + label -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="burger" aria-label="Менюну ачуу">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Башкы меню">
+        <ul>
+          <li><a href="#home">Башкы бет</a></li>
+          <li><a href="#test">Тест</a></li>
+          <li><a href="#categories">Категориялар</a></li>
+          <li><a href="#rating">Рейтинг</a></li>
+          <li><a href="#rules">Эреже</a></li>
+          <li class="nav-cta-mobile"><a href="#test" class="btn btn-gold">Тестти баштоо</a></li>
+        </ul>
+      </nav>
+
+      <a href="#test" class="btn btn-gold header-cta">Тестти баштоо</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== 1. БАШКЫ БЕТ (HERO) ===================== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-text">
+          <p class="eyebrow">✦ Ислам боюнча викторина ✦</p>
+          <h1>ИСЛАМИЙ БИЛИМ</h1>
+          <p class="hero-subtitle">Билимиңди сынап көр!</p>
+          <p class="hero-desc">Категория жана деңгээлди тандап, суроолорго жооп бериңиз, упай топтоп, рейтингде орун алыңыз.</p>
+
+          <div class="btn-group">
+            <a href="#categories" class="btn btn-gold btn-lg">Тестти баштоо</a>
+            <a href="#rules" class="btn btn-outline-light btn-lg">Эреже</a>
+          </div>
+        </div>
+
+        <!-- Декоративдик сүрөт: орнамент, ай, жылдыздар жана Куран китеби -->
+        <div class="hero-art" aria-hidden="true">
+          <svg class="hero-art__star" viewBox="0 0 400 400">
+            <g fill="none" stroke="#d4af37" stroke-width="2">
+              <circle cx="200" cy="200" r="190" opacity=".35"/>
+              <circle cx="200" cy="200" r="150" opacity=".25"/>
+              <rect x="94" y="94" width="212" height="212" opacity=".7"/>
+              <rect x="94" y="94" width="212" height="212" transform="rotate(45 200 200)" opacity=".7"/>
+              <rect x="136" y="136" width="128" height="128" opacity=".4"/>
+              <rect x="136" y="136" width="128" height="128" transform="rotate(45 200 200)" opacity=".4"/>
+            </g>
+          </svg>
+
+          <span class="hero-art__moon"></span>
+          <span class="star star-1">✦</span>
+          <span class="star star-2">✦</span>
+          <span class="star star-3">✦</span>
+
+          <!-- Куран китебинин символикалык сүрөтү -->
+          <svg class="hero-art__quran" viewBox="0 0 320 240" role="img" aria-label="Куран китебинин символикалык сүрөтү">
+            <path d="M95 222 L160 178 L225 222" fill="none" stroke="#d4af37" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 58 Q94 36 160 62 L160 186 Q94 160 28 182 Z" fill="#f6f0e1" stroke="#d4af37" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M292 58 Q226 36 160 62 L160 186 Q226 160 292 182 Z" fill="#efe5c9" stroke="#d4af37" stroke-width="4" stroke-linejoin="round"/>
+            <g fill="none" stroke="#a98418" stroke-width="3" stroke-linecap="round" opacity=".55">
+              <path d="M48 86 Q94 72 140 90"/>
+              <path d="M48 106 Q94 92 140 110"/>
+              <path d="M48 126 Q94 112 140 130"/>
+              <path d="M48 146 Q94 132 140 150"/>
+              <path d="M180 90 Q226 72 272 86"/>
+              <path d="M180 110 Q226 92 272 106"/>
+              <path d="M180 130 Q226 112 272 126"/>
+              <path d="M180 150 Q226 132 272 146"/>
+            </g>
+            <polygon fill="#d4af37" points="176,34 166.47,36.68 171.31,45.31 162.68,40.47 160,50 157.32,40.47 148.69,45.31 153.53,36.68 144,34 153.53,31.32 148.69,22.69 157.32,27.53 160,18 162.68,27.53 171.31,22.69 166.47,31.32"/>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== ЖЫЙЫНТЫК (кыска маалымат) ===================== -->
+    <section class="summary" aria-labelledby="summary-title">
+      <div class="container">
+        <h2 id="summary-title" class="visually-hidden">Жыйынтык</h2>
+        <div class="summary-card">
+          <div class="summary-title">
+            <span class="summary-icon">🏆</span>
+            <div>
+              <h3>Жыйынтык</h3>
+              <p>Акыркы тестиңиздин натыйжасы</p>
+            </div>
+          </div>
+          <ul class="summary-stats">
+            <li><strong>8 / 10</strong><span>Туура жооптор</span></li>
+            <li><strong>80%</strong><span>Упай</span></li>
+            <li><strong>4-орун</strong><span>Рейтингде</span></li>
+          </ul>
+          <a href="#result" class="btn btn-green">Толугу менен көрүү</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 9. КҮНДҮН СУРООСУ ===================== -->
+    <section id="daily" class="section">
+      <div class="container">
+        <article class="daily-card">
+          <div class="daily-head">
+            <span class="badge">🌙 Күндүн суроосу</span>
+            <h2>Күндүн суроосу</h2>
+          </div>
+          <p class="daily-question">Исламдын биринчи түркүгү кайсы?</p>
+
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="daily" id="daily-a">
+              <label for="daily-a" class="is-wrong"><span class="letter">A</span><span class="text">Намаз</span></label>
+            </div>
+            <div class="option">
+              <input type="radio" name="daily" id="daily-b">
+              <label for="daily-b" class="is-wrong"><span class="letter">B</span><span class="text">Орозо</span></label>
+            </div>
+            <div class="option">
+              <input type="radio" name="daily" id="daily-c">
+              <label for="daily-c" class="is-correct"><span class="letter">C</span><span class="text">Шаһадат келтирүү</span></label>
+            </div>
+            <div class="option">
+              <input type="radio" name="daily" id="daily-d">
+              <label for="daily-d" class="is-wrong"><span class="letter">D</span><span class="text">Зекет</span></label>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== 3. КАТЕГОРИЯЛАР ===================== -->
+    <section id="categories" class="section section-white">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">1-кадам</p>
+          <h2>Категорияны тандаңыз</h2>
+          <p>Кайсы темада билимиңизди сынагыңыз келет?</p>
+        </header>
+
+        <div class="grid grid-4">
+          <article class="choice">
+            <input type="radio" name="category" id="cat-1" checked>
+            <label for="cat-1" class="choice-card">
+              <span class="choice-icon">🕌</span>
+              <h3>Исламдын негиздери</h3>
+              <p>Ыйман жана ислам түркүктөрү</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-2">
+            <label for="cat-2" class="choice-card">
+              <span class="choice-icon">📖</span>
+              <h3>Куран</h3>
+              <p>Ыйык китеп жана сүрөлөр</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-3">
+            <label for="cat-3" class="choice-card">
+              <span class="choice-icon">🌙</span>
+              <h3>Пайгамбарлар</h3>
+              <p>Пайгамбарлардын өмүрү</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-4">
+            <label for="cat-4" class="choice-card">
+              <span class="choice-icon">🤲</span>
+              <h3>Намаз</h3>
+              <p>Намаздын эрежелери</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-5">
+            <label for="cat-5" class="choice-card">
+              <span class="choice-icon">☪️</span>
+              <h3>Орозо</h3>
+              <p>Рамазан жана орозо</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-6">
+            <label for="cat-6" class="choice-card">
+              <span class="choice-icon">💰</span>
+              <h3>Зекет</h3>
+              <p>Садака жана зекет</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-7">
+            <label for="cat-7" class="choice-card">
+              <span class="choice-icon">🕋</span>
+              <h3>Ажылык</h3>
+              <p>Хаж жана умра</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="category" id="cat-8">
+            <label for="cat-8" class="choice-card">
+              <span class="choice-icon">🌿</span>
+              <h3>Ислам адептери</h3>
+              <p>Жүрүм-турум жана маданият</p>
+            </label>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. ДЕҢГЭЭЛДЕР ===================== -->
+    <section id="levels" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">2-кадам</p>
+          <h2>Деңгээлди тандаңыз</h2>
+          <p>Өз билимиңизге ылайыктуу деңгээлден баштаңыз.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="choice">
+            <input type="radio" name="level" id="level-1" checked>
+            <label for="level-1" class="choice-card level-card">
+              <span class="stars">★☆☆</span>
+              <h3>Жеңил</h3>
+              <p>Башталгычтар үчүн</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="level" id="level-2">
+            <label for="level-2" class="choice-card level-card">
+              <span class="stars">★★☆</span>
+              <h3>Орто</h3>
+              <p>Ислам боюнча негизги билими барлар үчүн</p>
+            </label>
+          </article>
+          <article class="choice">
+            <input type="radio" name="level" id="level-3">
+            <label for="level-3" class="choice-card level-card">
+              <span class="stars">★★★</span>
+              <h3>Кыйын</h3>
+              <p>Тереңирээк билимди текшерүү үчүн</p>
+            </label>
+          </article>
+        </div>
+
+        <div class="center-actions">
+          <a href="#test" class="btn btn-green btn-lg">Тестти баштоо</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2, 5, 6. ТЕСТ ИНТЕРФЕЙСИ ===================== -->
+    <section id="test" class="section section-dark">
+      <div class="container">
+
+        <div class="test-wrap">
+
+          <!-- Жогорку панель: логотип, суроонун номери, progress bar, таймер -->
+          <div class="test-top">
+            <div class="test-logo">
+              <span class="test-logo-icon">☪</span>
+              <span>Исламий билим</span>
+            </div>
+
+            <div class="test-progress">
+              <p class="test-counter">1 / 10 суроо</p>
+              <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Тесттин өтүшү">
+                <div class="progress-bar" style="--value: 10%;"></div>
+              </div>
+            </div>
+
+            <div class="timer" aria-label="Таймер">
+              <span class="timer-icon">⏱</span>
+              <span class="timer-time">00:30</span>
+            </div>
+          </div>
+
+          <!-- Суроо card -->
+          <article class="question-card">
+            <p class="question-label">Суроо</p>
+            <h2 class="question-text">Исламдын канча түркүгү бар?</h2>
+
+            <div class="options">
+              <div class="option">
+                <input type="radio" name="test-q1" id="t1-a">
+                <label for="t1-a" class="is-wrong"><span class="letter">A</span><span class="text">3</span></label>
+              </div>
+              <div class="option">
+                <input type="radio" name="test-q1" id="t1-b">
+                <label for="t1-b" class="is-wrong"><span class="letter">B</span><span class="text">4</span></label>
+              </div>
+              <div class="option">
+                <input type="radio" name="test-q1" id="t1-c">
+                <label for="t1-c" class="is-correct"><span class="letter">C</span><span class="text">5</span></label>
+              </div>
+              <div class="option">
+                <input type="radio" name="test-q1" id="t1-d">
+                <label for="t1-d" class="is-wrong"><span class="letter">D</span><span class="text">6</span></label>
+              </div>
+            </div>
+
+            <p class="legend">
+              <span class="legend-item legend-ok">Туура жооп</span>
+              <span class="legend-item legend-bad">Туура эмес жооп</span>
+            </p>
+          </article>
+
+          <!-- Төмөнкү кнопкалар -->
+          <div class="test-actions">
+            <a href="#test" class="btn btn-outline-light is-disabled" aria-disabled="true">← Мурунку</a>
+            <a href="#result" class="btn btn-outline-light">Тестти бүтүрүү</a>
+            <a href="#test" class="btn btn-gold">Кийинки суроо →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== МИСАЛ СУРООЛОР (10 card) ===================== -->
+    <section id="questions" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">Мисал суроолор</p>
+          <h2>Суроолордун үлгүлөрү</h2>
+          <p>Жоопту басып көрүңүз: туура жооп жашыл, туура эмеси кызыл болот.</p>
+        </header>
+
+        <div class="grid grid-2">
+
+          <article class="q-card">
+            <span class="q-number">Суроо 1</span>
+            <h3>Исламдын канча түркүгү бар?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q1" id="q1-a"><label for="q1-a" class="is-wrong"><span class="letter">A</span><span class="text">3</span></label></div>
+              <div class="option"><input type="radio" name="q1" id="q1-b"><label for="q1-b" class="is-wrong"><span class="letter">B</span><span class="text">4</span></label></div>
+              <div class="option"><input type="radio" name="q1" id="q1-c"><label for="q1-c" class="is-correct"><span class="letter">C</span><span class="text">5</span></label></div>
+              <div class="option"><input type="radio" name="q1" id="q1-d"><label for="q1-d" class="is-wrong"><span class="letter">D</span><span class="text">6</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 2</span>
+            <h3>Куран канча сүрөдөн турат?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q2" id="q2-a"><label for="q2-a" class="is-wrong"><span class="letter">A</span><span class="text">99</span></label></div>
+              <div class="option"><input type="radio" name="q2" id="q2-b"><label for="q2-b" class="is-correct"><span class="letter">B</span><span class="text">114</span></label></div>
+              <div class="option"><input type="radio" name="q2" id="q2-c"><label for="q2-c" class="is-wrong"><span class="letter">C</span><span class="text">120</span></label></div>
+              <div class="option"><input type="radio" name="q2" id="q2-d"><label for="q2-d" class="is-wrong"><span class="letter">D</span><span class="text">144</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 3</span>
+            <h3>Акыркы пайгамбар ким?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q3" id="q3-a"><label for="q3-a" class="is-wrong"><span class="letter">A</span><span class="text">Ыйса (а.с.)</span></label></div>
+              <div class="option"><input type="radio" name="q3" id="q3-b"><label for="q3-b" class="is-wrong"><span class="letter">B</span><span class="text">Муса (а.с.)</span></label></div>
+              <div class="option"><input type="radio" name="q3" id="q3-c"><label for="q3-c" class="is-wrong"><span class="letter">C</span><span class="text">Ибрахим (а.с.)</span></label></div>
+              <div class="option"><input type="radio" name="q3" id="q3-d"><label for="q3-d" class="is-correct"><span class="letter">D</span><span class="text">Мухаммад (с.а.в.)</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 4</span>
+            <h3>Күнүнө канча маал парз намаз окулат?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q4" id="q4-a"><label for="q4-a" class="is-wrong"><span class="letter">A</span><span class="text">3</span></label></div>
+              <div class="option"><input type="radio" name="q4" id="q4-b"><label for="q4-b" class="is-correct"><span class="letter">B</span><span class="text">5</span></label></div>
+              <div class="option"><input type="radio" name="q4" id="q4-c"><label for="q4-c" class="is-wrong"><span class="letter">C</span><span class="text">4</span></label></div>
+              <div class="option"><input type="radio" name="q4" id="q4-d"><label for="q4-d" class="is-wrong"><span class="letter">D</span><span class="text">6</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 5</span>
+            <h3>Орозо кайсы айда кармалат?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q5" id="q5-a"><label for="q5-a" class="is-correct"><span class="letter">A</span><span class="text">Рамазан</span></label></div>
+              <div class="option"><input type="radio" name="q5" id="q5-b"><label for="q5-b" class="is-wrong"><span class="letter">B</span><span class="text">Мухаррам</span></label></div>
+              <div class="option"><input type="radio" name="q5" id="q5-c"><label for="q5-c" class="is-wrong"><span class="letter">C</span><span class="text">Шаъбан</span></label></div>
+              <div class="option"><input type="radio" name="q5" id="q5-d"><label for="q5-d" class="is-wrong"><span class="letter">D</span><span class="text">Зулхижжа</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 6</span>
+            <h3>Накталай акча жана алтындын зекети (нисапка жеткенде) канча пайыз?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q6" id="q6-a"><label for="q6-a" class="is-wrong"><span class="letter">A</span><span class="text">1%</span></label></div>
+              <div class="option"><input type="radio" name="q6" id="q6-b"><label for="q6-b" class="is-wrong"><span class="letter">B</span><span class="text">5%</span></label></div>
+              <div class="option"><input type="radio" name="q6" id="q6-c"><label for="q6-c" class="is-correct"><span class="letter">C</span><span class="text">2,5%</span></label></div>
+              <div class="option"><input type="radio" name="q6" id="q6-d"><label for="q6-d" class="is-wrong"><span class="letter">D</span><span class="text">10%</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 7</span>
+            <h3>Ажылык (хаж) кайсы шаарда аткарылат?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q7" id="q7-a"><label for="q7-a" class="is-wrong"><span class="letter">A</span><span class="text">Мадина</span></label></div>
+              <div class="option"><input type="radio" name="q7" id="q7-b"><label for="q7-b" class="is-wrong"><span class="letter">B</span><span class="text">Куддус</span></label></div>
+              <div class="option"><input type="radio" name="q7" id="q7-c"><label for="q7-c" class="is-wrong"><span class="letter">C</span><span class="text">Бухара</span></label></div>
+              <div class="option"><input type="radio" name="q7" id="q7-d"><label for="q7-d" class="is-correct"><span class="letter">D</span><span class="text">Мекке</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 8</span>
+            <h3>Тамакты баштаарда эмне деп айтылат (сүннөт)?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q8" id="q8-a"><label for="q8-a" class="is-wrong"><span class="letter">A</span><span class="text">Аллаху акбар</span></label></div>
+              <div class="option"><input type="radio" name="q8" id="q8-b"><label for="q8-b" class="is-correct"><span class="letter">B</span><span class="text">Бисмиллаһ</span></label></div>
+              <div class="option"><input type="radio" name="q8" id="q8-c"><label for="q8-c" class="is-wrong"><span class="letter">C</span><span class="text">Субханаллаһ</span></label></div>
+              <div class="option"><input type="radio" name="q8" id="q8-d"><label for="q8-d" class="is-wrong"><span class="letter">D</span><span class="text">Иншааллах</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 9</span>
+            <h3>Куранда биринчи түшкөн аяттар кайсы сүрөдөн?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q9" id="q9-a"><label for="q9-a" class="is-wrong"><span class="letter">A</span><span class="text">Фатиха</span></label></div>
+              <div class="option"><input type="radio" name="q9" id="q9-b"><label for="q9-b" class="is-wrong"><span class="letter">B</span><span class="text">Бакара</span></label></div>
+              <div class="option"><input type="radio" name="q9" id="q9-c"><label for="q9-c" class="is-correct"><span class="letter">C</span><span class="text">Алак</span></label></div>
+              <div class="option"><input type="radio" name="q9" id="q9-d"><label for="q9-d" class="is-wrong"><span class="letter">D</span><span class="text">Ихлас</span></label></div>
+            </div>
+          </article>
+
+          <article class="q-card">
+            <span class="q-number">Суроо 10</span>
+            <h3>«Хижра» деген эмне?</h3>
+            <div class="options">
+              <div class="option"><input type="radio" name="q10" id="q10-a"><label for="q10-a" class="is-wrong"><span class="letter">A</span><span class="text">Түнкү саякат жана асманга көтөрүлүү</span></label></div>
+              <div class="option"><input type="radio" name="q10" id="q10-b"><label for="q10-b" class="is-wrong"><span class="letter">B</span><span class="text">Бадр салгылашуусу</span></label></div>
+              <div class="option"><input type="radio" name="q10" id="q10-c"><label for="q10-c" class="is-wrong"><span class="letter">C</span><span class="text">Куран түшө баштаганы</span></label></div>
+              <div class="option"><input type="radio" name="q10" id="q10-d"><label for="q10-d" class="is-correct"><span class="letter">D</span><span class="text">Мекеден Мадинага көчүү</span></label></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. ЖЫЙЫНТЫК ===================== -->
+    <section id="result" class="section section-dark">
+      <div class="container">
+        <article class="result-card">
+          <h2>Тест аяктады!</h2>
+          <p class="result-message">🎉 Азаматсыз!</p>
+
+          <div class="score-ring" style="--score: 80%;">
+            <div class="score-ring-inner">
+              <strong>8 / 10</strong>
+            </div>
+          </div>
+
+          <ul class="result-stats">
+            <li class="stat-ok"><strong>8</strong><span>Туура жооптор</span></li>
+            <li class="stat-bad"><strong>2</strong><span>Туура эмес жооптор</span></li>
+            <li class="stat-score"><strong>80%</strong><span>Упай</span></li>
+          </ul>
+
+          <div class="btn-group btn-group-center">
+            <a href="#categories" class="btn btn-gold btn-lg">Кайра тест тапшыруу</a>
+            <a href="#home" class="btn btn-outline-light btn-lg">Башкы бетке кайтуу</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== 8. РЕЙТИНГ ===================== -->
+    <section id="rating" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">🏅 Мыкты катышуучулар</p>
+          <h2>Рейтинг</h2>
+          <p>Эң жогорку упай топтогон катышуучулар.</p>
+        </header>
+
+        <ol class="rating-list">
+          <li class="rating-item">
+            <span class="rank">1</span>
+            <span class="avatar">А</span>
+            <div class="rating-info">
+              <span class="rating-name">Ахмад</span>
+              <div class="rating-bar"><div style="--value: 100%;"></div></div>
+            </div>
+            <span class="rating-score">100%</span>
+          </li>
+          <li class="rating-item">
+            <span class="rank">2</span>
+            <span class="avatar">М</span>
+            <div class="rating-info">
+              <span class="rating-name">Мухаммад</span>
+              <div class="rating-bar"><div style="--value: 90%;"></div></div>
+            </div>
+            <span class="rating-score">90%</span>
+          </li>
+          <li class="rating-item">
+            <span class="rank">3</span>
+            <span class="avatar">А</span>
+            <div class="rating-info">
+              <span class="rating-name">Абдуллах</span>
+              <div class="rating-bar"><div style="--value: 80%;"></div></div>
+            </div>
+            <span class="rating-score">80%</span>
+          </li>
+          <li class="rating-item">
+            <span class="rank">4</span>
+            <span class="avatar">А</span>
+            <div class="rating-info">
+              <span class="rating-name">Али</span>
+              <div class="rating-bar"><div style="--value: 70%;"></div></div>
+            </div>
+            <span class="rating-score">70%</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 10. ЭРЕЖЕЛЕР ===================== -->
+    <section id="rules" class="section section-white">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow-dark">📜 Эмнеге көңүл буруу керек</p>
+          <h2>Тесттин эрежелери</h2>
+        </header>
+
+        <ol class="rules-list">
+          <li class="rule-card"><span class="rule-number">1</span><p>Ар бир суроого бир жооп тандаңыз.</p></li>
+          <li class="rule-card"><span class="rule-number">2</span><p>Ар бир туура жооп үчүн упай берилет.</p></li>
+          <li class="rule-card"><span class="rule-number">3</span><p>Тесттин аягында жалпы жыйынтык көрсөтүлөт.</p></li>
+          <li class="rule-card"><span class="rule-number">4</span><p>Билимиңизди текшерип, жаңы нерселерди үйрөнүңүз.</p></li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-about">
+        <p class="footer-brand">☪ ИСЛАМИЙ БИЛИМ</p>
+        <p>Ислам боюнча билимиңди сынап, билимиңди арттыр.</p>
+      </div>
+
+      <nav class="footer-menu" aria-label="Footer меню">
+        <h3>Меню</h3>
+        <ul>
+          <li><a href="#home">Башкы бет</a></li>
+          <li><a href="#test">Тест</a></li>
+          <li><a href="#categories">Категориялар</a></li>
+          <li><a href="#rating">Рейтинг</a></li>
+          <li><a href="#rules">Эреже</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>Байланыш</h3>
+        <ul>
+          <li>📧 info@example.com</li>
+          <li>📞 +996 000 000 000</li>
+          <li>📍 Бишкек, Кыргызстан</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Исламий Билим</p>
+    </div>
+  </footer>
+
+</body>
+</html>
